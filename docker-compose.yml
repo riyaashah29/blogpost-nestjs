@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  dev-blog-db:
+    image: postgres:15
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: dockerBlogPost
+    
+  search:
+    image: getmeili/meilisearch:v1.1
+    ports:
+      - 7900:7700
+
+
